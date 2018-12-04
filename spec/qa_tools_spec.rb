@@ -71,15 +71,15 @@ describe 'testing the demo qa registration page' do
   end
 
   it "should deselect the profession buttons when clicked twice" do
-    @driver_class.check_profession_box @random3
+    @driver_class.check_profession_box @random2
     if @driver_class.is_button_selected?(@profession, @random3)
-      @driver_class.check_profession_box @random3
+      @driver_class.check_profession_box @random2
       expect(@driver_class.is_button_selected?(@profession, @random3)).to be FALSE
     end
   end
 
   it "should have a profession button selected" do
-    @driver_class.check_profession_box @random3
+    @driver_class.check_profession_box @random2
     expect(@driver_class.is_button_selected?(@profession, @random3)).to be TRUE
   end
 
